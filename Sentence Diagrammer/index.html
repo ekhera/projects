@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>THE SENTENCE DIAGRAMMER</title>
+  <meta name="description" content="Interactive practice for diagramming sentences.">
+  <link rel="stylesheet" href="main.css">
+</head>
+    
+<body onresize="sentDiag.redraw()">
+
+  
+  <header>
+  
+    <div id="titleWelcome">
+      <h1>Sentence Diagrammer</h1>
+      <h2>Test Your Skills</h2>
+    </div>
+
+   
+    <div id="titleDiagram" style="display: none;">
+      <h1><span id="curSent"></span></h1>
+      <h2>Please diagram the sentence above, <span id="fnameEntered"></span>.</h2>
+    </div>
+  </header>
+
+
+  
+  <main>
+    
+ 
+    <div id="mainL">
+     
+      <div id="mainLshow" style="display: none;">
+        <button class='sentStructure' draggable='true' ondrag='sentDiag.elDragged=1'>
+          <img src='mainSentence.jpg' width='58' height='32' alt='subject verb sentence structure'> </button><br>
+        subject verb<br><br>
+        <button class='sentStructure' draggable='true' ondrag='sentDiag.elDragged=2'>
+          <img src='directObject.jpg' width='58' height='32' alt='direct object sentence structure'> </button><br>
+        direct object<br><br>
+        <button class='sentStructure' draggable='true' ondrag='sentDiag.elDragged=3'>
+          <img src='modifier.jpg' width='58' height='32' alt='modifier sentence structure'> </button><br>
+        modifier
+      </div>
+    </div>
+
+  
+    <div id="mainC">
+     
+      <div id="mainCwelcome" class="content">
+        <label for="fn">Your name: </label>
+          <input type="text" id="fn" required autofocus>
+          <span id="fnameErr" class="err"></span><br><br>
+        <label for="score">Anticipated score <small>(out of 100%)</small>: </label>
+          <input type='number' id='score' min='0' max='100'>
+          <span id="scoreErr" class="err"></span><br><br>
+        <input type="submit" value="Submit" class="menu" onClick="sentDiag.validInput()">
+      </div>
+
+    
+      <div id="mainCcanvas" style="display: none;">
+      
+        <canvas id='myCanvas'
+          ondrop='sentDiag.processChoice(event);' ondragover='event.preventDefault();'>
+          Your browser does not support the HTML5 canvas tag.
+        </canvas>
+      </div>
+    </div>
+
+    <!-- RIGHT Column of Main Content Area
+          initially blank; will show available words later-->
+    <div id="mainR">
+      <div id="mainRshow">&nbsp;</div>
+    </div>
+  </main>
+
+
+  <section id="navDirectionsFeedback">
+    <div id="direct" class="directs">
+
+     
+      <div id="directShow" style="display: none;">
+     
+        <input id='res' class='menu' type='submit' value='Reset'  
+            onclick='sentDiag.resetAll();'>
+        <input id='checkP' class='menu' type='submit' value='Check Answer' 
+            onclick='sentDiag.checkProposal();'>
+
+ 
+        <div id="directions">
+          <p>Drag diagram elements onto the canvas.<br>
+          Then drag words onto the diagram.</p>
+        </div>
+
+      
+        <div>
+          <p id="feedback" style="display: none;">&nbsp;</p>
+        </div>
+      </div>
+
+      <div id="errorM" style="display: none;">
+        <p><span id="errorMsg">&nbsp;</span></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
