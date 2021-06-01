@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+	<html lang="en-us">
+
+	<head>
+		<title> Stonewood Grill :: Reservations</title>
+		<meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="rs.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="rs.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+  
+  <script>
+    function captureFormData(f) 
+    {
+      // data will contain comma separated values for popup box
+      var data = "You are all set!", i, len;
+      
+      // set len to number of form elements f contains
+      len = f.length;
+
+      // traverse elements, one by one, where i is current element
+      for (i = 0; i < len; i++)  
+      {
+        // append value of current form element to data
+        data = data + f.elements[i].value;
+
+        // if not at end of form, so not last form element yet
+        if (i < len-1) 
+        { 
+          data += ", ";  // append comma
+        }
+      }
+      // in pop up display comma separated values stored in data
+      alert (data);  
+    }
+  </script>
+ </head>
+
+
+	<body>
+		<header>
+			<h1>Stonewood Grill </h1>
+      
+      
+		</header>
+
+		<nav id="navbar">
+			<ul>
+				<li> <a href="index.html" title="Home" >Home</a></li>
+				<li> <a href="hourslocation.html" title="Hours&Location">Hours&Location</a></li>
+				<li> <a href="menu.html" title="Menu">Menu</a></li>
+				<li> <a href="about.html" title="About">About Us</a></li>
+				<li> <a href="bakery.html" title="Bakery">Bakery</a></li>
+				<li> <a href="reservations.html" title= "Reservations" class="buttonclicked">Reservations</a></li>
+
+           </ul>
+		</nav>
+		<main>
+
+			<h2> Reservations</h2>
+
+
+    <div class="wrapper">
+			<h3 >Book a table</h3></div>
+
+             <div>
+              <form id="frm" autocomplete="off">
+    
+      <div class="form-field">
+        <label for="myFName"> Full Name: </label>
+      </div>
+      <div class="form-field">
+        <input type="text" id="myFName" name="myFName" >
+      </div>
+
+
+      <div class="form-field">
+        <label for="myEmail">E-mail Address: </label>
+      </div>
+      <div class="form-field">
+        <input type="email" id="myEmail" name="myEmail" required>
+      </div>
+      
+      <div class="form-field">
+        <label for="myTour"> Time: </label>
+      </div>
+      <div class="form-field">
+        <select id="myTour" name="myTour">
+          <option>               </option>
+          <option>9:00am-11:00am</option>
+          <option>11:00-1:00pm</option>
+          <option>1:00pm-3:00pm</option>
+          <option>3:00-5:00pm</option>
+          <option>5:00-7:00pm</option>
+          <option>7:00-9:00pm</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="myDate">Date of Reservation: </label>
+      </div>
+      <div class="form-field">
+        <input type="date" id="myDate" name="myDate">
+      </div>
+
+      <div class="form-field">
+        <label for="myGroup">Number of Guests: </label>
+      </div>
+      <div class="form-field">
+        <input type="number" id="myGroup" name="myGroup" min="1" max="20">
+      </div>
+
+      
+
+      
+
+      <div class="form-field">
+        &nbsp;
+      </div>
+      <div class="form-field">
+
+        <input type="submit"  style="color: #ff71b8; font-size: 20px"  id="mySubmit" value="Submit">
+        </div>
+     <br>
+   </br>
+      </div>
+    </div>
+    </form>
+   
+
+    <script>
+      $("#frm").validate();  // validate frm form elements
+
+      $(function () {
+        $('#frm').submit(function () {  // redefine submit for frm
+            if($(this).valid()) {  // if this form is valid
+                captureFormData(this);  // send it to captureFormData
+            }
+        });
+      });
+    </script>
+  </main>
+
+
+
+             
+
+
+
+
+		<div id="container">
+		<div id="main">
+			
+		</div>
+	</div>
+
+	<footer>
+  <div class= "footer">
+      &COPY; Stonewood Grill<br>
+       Contact us : <br>
+      <a href="mailto:ekhera@hccfl.edu">ekhera@hawkmail.hccfl.edu</a><br>
+     <span id="mobile"><a href="tel:1813-898-3910">
+     <i class="fa fa-phone"></i> 1813-898-3910</a></span>
+<span id="desktop">1813-898-3910</span>
+
+ 
+    </div>
+  </footer>
+
+     
+
+
+
+</body>
+</html>
+
