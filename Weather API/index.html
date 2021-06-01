@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="api.css">
+    <title>Weather</title>
+</head>
+<h2 style="text-align: center; color: white; " > FindOut Today's Weather!</h2>
+
+
+<body>
+    <div class="app-main">
+        <div class="searchInputBox" style="margin-top: -40px;">
+            <input type="text"  style="width: 20em; height: 50px; text-align: center; box-shadow: 5px 5px 5px 4px white; border: none;"  id="input-box" class="input-box" placeholder="Enter City/Country Name" autocomplete="off">
+        </div>
+        
+     
+        <div class="weather-body" style="margin-top: 30px;">
+
+            <div class="location-details">
+                
+               
+                <div class="city" id="city">Tampa, FL</div>
+                <div class="date" id="date"> 25 November (Wednesday), 2020</div>
+            </div>
+        
+
+            <div class="weather-status">
+                
+                
+                <div class="temp" id="temp">34&deg;C</div>
+
+                <div class="min-max" id="min-max">32&deg;C (min) / 34&deg;C (max)</div>
+                
+                <div class="weather" id="weather">Clear</div>
+                <div id="img"></div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+</body>
+</html>
