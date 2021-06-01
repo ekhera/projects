@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+<head>
+  <title>Acadian Adventures</title>
+  <meta name="description" content="Acadian Trails and Paths">
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="aa.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="aa.js"></script>
+</head>
+  
+<body>
+  <header>
+    <h1>Acadian Adventures</h1>
+    <a class="hmbgr" onclick="toggleNavBar()"><i class="fa fa-bars"></i></a>
+  </header>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html" class="menu-chosen" title="Go to Home page">Home</a></li>
+      <li><a href="natureVR.html" title="Go to Nature VR page">Nature VR</a></li>
+      <li><a href="tidePools.html" title="Go to Tide Pools page">Tide Pools</a></li>
+      <li><a href="intertidalLife.html" title="Go to Intertidal Life page">Intertidal Life</a></li>
+      <li><a href="fossils.html" title="Go to Fossils page">Fossils</a></li>
+      <li><a href="tours.html" title="Go to Tours page">Tours</a></li>
+    </ul>
+  </nav>
+
+  <div id="homehero"></div>
+
+  <main>
+    <h2>Scale the Cliffs for the Adventure of a Lifetime</h2>
+
+    <p><span class="excursion">Acadian Adventures</span> gives you the opportunity to choose the order in which you'd like to attempt some of the area's most exciting trails.  Paths below are listed from least to most difficult, so you can build up your endurance and skill.</p>
+
+    <ol>
+      <li>Ocean Path</li>
+      <li>South Bubble Mountain</li>
+      <li>The Beehive Trail</li>
+    </ol>
+
+    <h4>Click the largest periwinkle in the image below for a discount code!</h4>
+
+    <picture>
+      <source srcset="media/periwinkle350.jpg" media="(max-width: 550px)">
+      <source srcset="media/periwinkle500.jpg" media="(max-width: 800px)">
+      <source srcset="media/periwinkle750.jpg" media="(max-width: 1050px)">
+      <img src="media/periwinkle1000.jpg" alt="Tide Pool Barnacles and Periwinkles" usemap="#peri">
+    </picture>
+
+    <map name="peri">
+      <area shape="rect" coords="160,25,310,185" href="javascript: alert('Discount Code: AA2019');" alt="Large brown snail shell">
+      <area shape="default" href="javascript: alert('Please try again.');" alt="Light tan limestone shell">
+    </map>
+  </main>
+
+  <footer>
+    <p id="addy">
+      Acadian Adventures<br>
+      555 Mountain Top Way<br>
+      Southwest Harbor, Maine 88791
+    </p>
+
+    <p id="copy">
+      &copy; 2021 Acadian Adventures<br>
+      <a href="mailto:ekhera001@gmail.com" title="Send e-mail to ekhera001@gmail.com">ekhera001@gmail.com</a><br>
+      <span id="mobile"><a href="tel:813-000-0000">
+        <i class="fa fa-phone"></i> 813-000-0000</a></span>
+      <span id="desktop">813-000-0000</span>
+    </p>
+  </footer>
+</body>
+</html>
+

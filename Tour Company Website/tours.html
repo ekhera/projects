@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+<head>
+  <title>AA :: Tours</title>
+  <meta name="description" content="Tour Options at Joggins Fossil Cliffs">
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="aa.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="aa.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+  
+  <script>
+    function captureFormData(f) 
+    {
+     
+      var data = "", i, len;
+      
+      
+      len = f.length;
+
+      
+      for (i = 0; i < len; i++)  
+      {
+       
+        data = data + f.elements[i].value;
+
+       
+        if (i < len-1) 
+        { 
+          data += ", ";  
+        }
+      }
+     
+      alert (data);  
+    }
+  </script>
+</head>
+  
+<body>
+  <header>
+    <h1>Acadian Adventures</h1>
+    <a class="hmbgr" onclick="toggleNavBar()"><i class="fa fa-bars"></i></a>
+  </header>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html" title="Go to Home page">Home</a></li>
+      <li><a href="natureVR.html" title="Go to Nature VR page">Nature VR</a></li>
+      <li><a href="tidePools.html" title="Go to Tide Pools page">Tide Pools</a></li>
+      <li><a href="intertidalLife.html" title="Go to Intertidal Life page">Intertidal Life</a></li>
+      <li><a href="fossils.html" title="Go to Fossils page">Fossils</a></li>
+      <li><a href="tours.html" class="menu-chosen" title="Go to Tours page">Tours</a></li>
+    </ul>
+  </nav>
+  
+
+  <main>
+    <h2>Tour Reservation for Joggins Fossil Cliffs</h2>
+    
+    <div style="text-align: center;">
+    <p>Required information is marked with an asterisk (*).</p>
+
+    <form id="frm">
+    <div class="grid-container">
+      <div class="rightJustify">
+        <label for="myFName"> First Name: </label>
+      </div>
+      <div class="leftJustify">
+        <input type="text" id="myFName" name="myFName" >
+      </div>
+
+      <div class="rightJustify">
+        <label for="myLName"> Last Name: </label>
+      </div>
+      <div class="leftJustify">
+        <input type="text" id="myLName" name="myLName" >
+      </div>
+
+      <div class="rightJustify">
+        <label for="myEmail">* E-mail: </label>
+      </div>
+      <div class="leftJustify">
+        <input type="email" id="myEmail" name="myEmail" required>
+      </div>
+      
+      <div class="rightJustify">
+        <label for="myTour"> Tour: </label>
+      </div>
+      <div class="leftJustify">
+        <select id="myTour" name="myTour">
+          <option>Joggins Hidden Cliffs Experience</option>
+          <option>Wanderer’s Experience</option>
+          <option>Explorer’s Experience</option>
+          <option>Adventurer’s Experience</option>
+        </select>
+      </div>
+
+      <div class="rightJustify">
+        <label for="myDate">Tour Date: </label>
+      </div>
+      <div class="leftJustify">
+        <input type="date" id="myDate" name="myDate">
+      </div>
+
+      <div class="rightJustify">
+        <label for="myGroup">Group Size: </label>
+      </div>
+      <div class="leftJustify">
+        <input type="number" id="myGroup" name="myGroup" min="1" max="10">
+      </div>
+
+      <div class="rightJustify">
+        <label for="myDCode"> Discount Code: </label>
+      </div>
+      <div class="leftJustify">
+        <input type="text" id="myDCode" name="myDCode">
+      </div>
+
+      <div class="rightJustify">
+        <label for="myComments"> Comments: </label>
+      </div>
+      <div class="leftJustify">
+        <textarea id="myComments" name="myComments" rows="3" cols="50" ></textarea>
+      </div>
+
+      <div class="rightJustify">
+        &nbsp;
+      </div>
+      <div class="leftJustify">
+        <input type="submit" id="mySubmit" value="Submit">
+      </div>
+    </div>
+    </form>
+    </div>
+
+    <script>
+      $("#frm").validate();  // validate frm form elements
+
+      $(function () {
+        $('#frm').submit(function () {  // redefine submit for frm
+            if($(this).valid()) {  // if this form is valid
+                captureFormData(this);  // send it to captureFormData
+            }
+        });
+      });
+    </script>
+  </main>
+
+
+  <footer>
+    <p id="addy">
+      Acadian Adventures<br>
+      555 Mountain Top Way<br>
+      Southwest Harbor, Maine 88791
+    </p>
+
+    <p id="copy">
+     &copy; 2021 Acadian Adventures<br>
+      <a href="mailto:ekhera001@gmail.com" title="Send e-mail to ekhera001@gmail.com">ekhera001@gmail.com</a><br>
+      <span id="mobile"><a href="tel:813-000-0000">
+        <i class="fa fa-phone"></i> 813-000-0000</a></span>
+      <span id="desktop">813-000-0000</span>
+    </p>
+  </footer>
+</body>
+</html>
+
