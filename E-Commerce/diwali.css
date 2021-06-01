@@ -1,0 +1,133 @@
+
+*{
+
+margin-right: 0px;
+padding: 0px;
+
+
+}
+.nami{
+	font-family: "ink free", monospace,sans-serif;
+}
+
+#carti{
+	font-family: "ink free", monospace,sans-serif;
+	font-size: 26px;
+}
+.card-footer{
+font-family: "ink free", monospace,sans-serif;
+}
+
+
+th{
+font-family: "ink free", monospace,sans-serif;
+}
+
+
+td{
+font-family: "ink free", monospace,sans-serif;
+}
+
+.hello{
+	font-size: 30px;
+}
+
+#cont{
+font-family: "ink free", monospace,sans-serif;
+font-size: 40em;
+background-color: ;
+
+}
+
+
+table{
+	font-family: "ink free", monospace,sans-serif;
+	font-size: 30px;
+}
+
+body{
+	
+	
+	background-color: #f2d9f2;
+
+}
+
+hr.new5 {
+  border: 2px solid #404040;
+  border-radius: 4px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+
+.hand{
+	font-family: "ink free", monospace,sans-serif;
+	font-size: 5em;
+	margin-top: 0.2em;
+	text-align: center;
+	color: #404040;
+}
+
+.headi{
+	font-family: "ink free", monospace,sans-serif;
+	
+	font-weight: bold;
+}
+
+.nav-item{
+	font-family: "ink free", monospace,sans-serif;
+	color: white;
+	font-size: 26px;
+	font-weight: bold;
+
+}
+
+#heado{
+	font-family: "ink free", monospace,sans-serif;
+	
+	font-weight: bold;
+}
+
+footer { 
+  font-size: 29px ;
+  font-family: "ink free", monospace,sans-serif;
+ 
+  border-top:black;
+  text-align: center;
+  color: #0d0d0d;
+  display: bold;
+  opacity: .8;
+ border-bottom: 0px;
+  padding: 10px;
+ 
+  padding: 10px;
+  line-height: 30px;
+  margin-bottom: -1em;
+  margin-left: -1em;
+  margin-right: -1em;
+  font-weight: bold;
+
+}
+  footer a { 
+  color: #1a1a1a;
+  text-decoration: none;
+
+	
+}
+.lead{
+	box-shadow: 3px 3px 3px 3px gray;
+}
+
+#mode{
+	font-weight: bold;
+}
+
+hr.foot{
+	 border: 1px solid #404040;
+  border-radius: 4px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.paint{
+font-color: black;
+}
